@@ -23,6 +23,8 @@ namespace Shop
             i.setCellNumber(txtCell.Text);
             i.setArray(Convert.ToInt32(nudProductCount.Value.ToString()));
             pnlItems.Visible = true;
+            lblShopName.Text= "Shops name:"+i.getShopName();
+            lblTotal.Text = "The total is :"+i.getTotal();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -31,14 +33,29 @@ namespace Shop
             {
                 i.setProduct(txtProductName.Text);
                 i.setPrice(Convert.ToDouble(txtPrice.Text));
+                ItemsList();
             }
             else
             {
                 pnlItems.Visible = false;
                 MessageBox.Show("Your product list is full");
+                ItemsList();
             }
 
 
         }
+
+        private void ItemsList()
+        {
+            
+                for (int x = 0; x < i.getcounterPrice(); x++)
+                {
+                        string strTemp= String.Format("{0} ,\t \t R{1}", i.getProduct(x), i.getPrice(x));
+                        lbOutput.Items.Add(strTemp);
+                }
+                lblTotal.Text = "The total is :" + i.getTotal();
+
+        }
+            
+        }
     }
-}

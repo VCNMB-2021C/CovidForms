@@ -115,6 +115,11 @@
                 return badd;
         }
 
+        public int getcounterPrice()
+        {
+            return counterPrice;
+        }
+
         #endregion
 
     }
