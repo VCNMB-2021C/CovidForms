@@ -24,5 +24,21 @@ namespace Shop
             i.setArray(Convert.ToInt32(nudProductCount.Value.ToString()));
             pnlItems.Visible = true;
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (i.getCanAddItem())
+            {
+                i.setProduct(txtProductName.Text);
+                i.setPrice(Convert.ToDouble(txtPrice.Text));
+            }
+            else
+            {
+                pnlItems.Visible = false;
+                MessageBox.Show("Your product list is full");
+            }
+
+
+        }
     }
 }

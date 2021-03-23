@@ -105,6 +105,16 @@
             CellNo = strCellNum;
         }
 
+        public bool getCanAddItem()
+        {
+            bool badd = false;
+            if (iSizeArray < counterPrice)
+            {
+                badd = true;
+            }
+                return badd;
+        }
+
         #endregion
 
     }

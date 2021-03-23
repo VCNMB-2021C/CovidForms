@@ -35,8 +35,8 @@ namespace Shop
             this.btnAdd = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtProductName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnGetReport = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -80,8 +80,8 @@ namespace Shop
             this.pnlItems.Controls.Add(this.btnAdd);
             this.pnlItems.Controls.Add(this.label7);
             this.pnlItems.Controls.Add(this.label6);
-            this.pnlItems.Controls.Add(this.textBox2);
-            this.pnlItems.Controls.Add(this.textBox1);
+            this.pnlItems.Controls.Add(this.txtPrice);
+            this.pnlItems.Controls.Add(this.txtProductName);
             this.pnlItems.Controls.Add(this.label5);
             this.pnlItems.Location = new System.Drawing.Point(1, 204);
             this.pnlItems.Name = "pnlItems";
@@ -97,6 +97,7 @@ namespace Shop
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Add Item";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label7
             // 
@@ -116,19 +117,19 @@ namespace Shop
             this.label6.TabIndex = 10;
             this.label6.Text = "Product Name:";
             // 
-            // textBox2
+            // txtPrice
             // 
-            this.textBox2.Location = new System.Drawing.Point(121, 81);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(146, 23);
-            this.textBox2.TabIndex = 11;
+            this.txtPrice.Location = new System.Drawing.Point(121, 81);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(146, 23);
+            this.txtPrice.TabIndex = 11;
             // 
-            // textBox1
+            // txtProductName
             // 
-            this.textBox1.Location = new System.Drawing.Point(121, 52);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 23);
-            this.textBox1.TabIndex = 10;
+            this.txtProductName.Location = new System.Drawing.Point(121, 52);
+            this.txtProductName.Name = "txtProductName";
+            this.txtProductName.Size = new System.Drawing.Size(146, 23);
+            this.txtProductName.TabIndex = 10;
             // 
             // label5
             // 
@@ -297,7 +298,7 @@ namespace Shop
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtProductName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnGetReport;
         private System.Windows.Forms.Panel panel3;
@@ -312,5 +313,6 @@ namespace Shop
         private System.Windows.Forms.Label lblAddShop;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtPrice;
     }
 }
