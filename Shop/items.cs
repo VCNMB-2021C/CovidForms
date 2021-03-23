@@ -10,8 +10,7 @@
         private static string strShopName;
         private static string CellNo;
 
-        private static int counterProducts = 0;
-        private static int counterPrice = 0;
+        private static int counter = 0;
 
         private static int iSizeArray = 0;
 
@@ -22,16 +21,22 @@
 
 
         #region add to arrays
-        public void setProduct(string strProduct)
+        public bool addToArray(string strProduct, double dblPrice)
         {
-            productName[counterProducts] = strProduct;
-            counterProducts++;
-        }
-        public void setPrice(double dblPrice)
-        {
-            price[counterPrice] = dblPrice;
-            dTotal += dblPrice;
-            counterPrice++;
+            if(counter<iSizeArray)
+            {
+                productName[counter] = strProduct;
+                price[counter] = dblPrice;
+                dTotal += dblPrice;
+                counter++;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
+
         }
 
         #endregion
@@ -105,19 +110,11 @@
             CellNo = strCellNum;
         }
 
-        public bool getCanAddItem()
-        {
-            bool badd = false;
-            if (iSizeArray < counterPrice)
-            {
-                badd = true;
-            }
-                return badd;
-        }
 
-        public int getcounterPrice()
+
+        public int getcounter()
         {
-            return counterPrice;
+            return counter;
         }
 
         #endregion

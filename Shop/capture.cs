@@ -20,8 +20,7 @@ namespace Shop
                 Console.Write("Please enter price for " + strProduct + " R:");//request product price
                 double dblPrice = Convert.ToDouble(Console.ReadLine());
                 //set the values in the items object
-                i.setProduct(strProduct);
-                i.setPrice(dblPrice);
+                i.addToArray(strProduct, dblPrice);
 
             }
 

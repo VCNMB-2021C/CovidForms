@@ -149,6 +149,7 @@ namespace Shop
             this.btnGetReport.TabIndex = 3;
             this.btnGetReport.Text = "Refresh";
             this.btnGetReport.UseVisualStyleBackColor = true;
+            this.btnGetReport.Click += new System.EventHandler(this.btnGetReport_Click);
             // 
             // panel3
             // 
@@ -275,8 +276,9 @@ namespace Shop
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmShop2";
-            this.Text = "frmShop2";
+            this.Text = "Shop Generation 2.0";
             this.pnlItems.ResumeLayout(false);
             this.pnlItems.PerformLayout();
             this.panel3.ResumeLayout(false);
