@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace frmCovid
+namespace Shop
 {
     public partial class Form1 : Form
     {
@@ -17,9 +17,5 @@ namespace frmCovid
             InitializeComponent();
         }
 
-        private void btnJan_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
